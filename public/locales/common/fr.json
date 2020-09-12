@@ -1,5 +1,7 @@
 {
   "tk_language": "Langue",
+  "tk_duration_unit_map": "j h min sec ms",
+  "tk_now": "maintenant",
   "tk_examples": "Examples",
   "tk_text": "Text Examples",
   "tk_numbers": "Number Examples",

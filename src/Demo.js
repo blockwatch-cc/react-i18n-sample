@@ -88,7 +88,7 @@ const Demo = ({ i18n }) => {
 <NumberView v={0} zero="-" />
 
 # Percentages
-<PercentView v={10} />`}</code></pre>
+<PercentView v={0.015} />`}</code></pre>
         </div>
         <div className="col pad">
           <NumberView v={73.57583} />
@@ -101,7 +101,7 @@ const Demo = ({ i18n }) => {
           <br/>
           <NumberView v={0} zero="-" />
           <br/>
-          <PercentView v={10} />
+          <PercentView v={0.015} />
         </div>
       </section>
 
@@ -117,10 +117,16 @@ const Demo = ({ i18n }) => {
 <DateTimeView v={new Date()} />
 
 # Custom Format
-<DateTimeView v={new Date()} format="MMMM Do YYYY, h:mm:ss a" />
+<DateTimeView v={new Date()} format="MMMM Do YYYY, h:mm:ss A" />
 
 # Ago
-<DateTimeView v="2020-09-01T12:00:00Z" format="ago" />`}</code></pre>
+<DateTimeView v="2020-09-01T12:00:00Z" format="ago" />
+
+# Duration
+<TextView v={12345} format="duration" opts={{base:'s', stop:'m'}} />
+
+# Calendar
+<DateTimeView v={(new Date().getTime()) + 2*86400000} format="calendar" />`}</code></pre>
         </div>
         <div className="col pad">
           <br/>
@@ -130,12 +136,15 @@ const Demo = ({ i18n }) => {
           <DateTimeView v="2020-09-01T12:00:00Z" />
           <DateTimeView v={new Date()} />
           <br/>
-          <DateTimeView v={new Date()} format="MMMM Do YYYY, h:mm:ss a" />
+          <DateTimeView v={new Date()} format="MMMM Do YYYY, h:mm:ss A" />
           <br/>
           <DateTimeView v="2020-09-01T12:00:00Z" format="ago" />
+          <br/>
+          <TextView v={12345} format="duration" opts={{base:'s', stop:'s'}} />
+          <br/>
+          <DateTimeView v={new Date().getTime() + 2*86400000} format="calendar" />
         </div>
       </section>
-
     </>
   );
 };

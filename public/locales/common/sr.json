@@ -1,5 +1,7 @@
 {
   "tk_language": "Језик",
+  "tk_duration_unit_map": "дана сата мин сек мс",
+  "tk_now": "сада",
   "tk_examples": "Examples",
   "tk_text": "Text Examples",
   "tk_numbers": "Number Examples",

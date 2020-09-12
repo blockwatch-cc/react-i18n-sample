@@ -1,3 +1,7 @@
+// Copyright (c) 2020 Blockwatch Data Inc.
+// Author: alex@blockwatch.cc
+// License: MIT
+//
 import numeral from 'numeral';
 
 // fix duplicate format registrations

@@ -1,3 +1,7 @@
+// Copyright (c) 2020 Blockwatch Data Inc.
+// Author: alex@blockwatch.cc
+// License: MIT
+//
 import i18n from 'i18next';
 import XHR from 'i18next-xhr-backend';
 import storage from 'local-storage-fallback';

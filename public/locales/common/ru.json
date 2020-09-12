@@ -1,5 +1,7 @@
 {
   "tk_language": "Язык",
+  "tk_duration_unit_map": "д ч м сек мсек",
+  "tk_now": "сейчас",
   "tk_examples": "Examples",
   "tk_text": "Text Examples",
   "tk_numbers": "Number Examples",

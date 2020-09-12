@@ -1,3 +1,7 @@
+// Copyright (c) 2020 Blockwatch Data Inc.
+// Author: alex@blockwatch.cc
+// License: MIT
+//
 import moment from 'moment';
 import i18n from 'i18next';
 
@@ -23,13 +27,18 @@ export function toMoment(value) {
   }
 };
 
-export function convertCalendar(num, prefix, short) {
+const minute = 60000;
+const hour = 60 * minute;
+const day = 1440 * minute;
+const stopper = 'smhd';
+
+export function toCalendar(num, prefix, short, nowdiff = minute) {
   const diff = new Date(num) - new Date();
-  if (diff < 60000) {
-    return 'tk_now';
+  if (diff < nowdiff) {
+    return i18n.t('tk_now');
   }
-  if (diff > 2 * 86400000 || diff < 3600000) {
-    return convertMinutes(num, prefix, short);
+  if (diff > 2 * day || diff < hour) {
+    return toMinutes(num, prefix, short, nowdiff);
   }
   let res = [moment(num).calendar(!!short)];
   if (prefix) {
@@ -38,9 +47,9 @@ export function convertCalendar(num, prefix, short) {
   return res.join(' ');
 }
 
-export function convertMinutes(num, prefix, short) {
-  if (new Date(num) - new Date() < 60000) {
-    return 'tk_now';
+export function toMinutes(num, prefix, short, nowdiff = minute) {
+  if (new Date(num) - new Date() < nowdiff) {
+    return i18n.t('tk_now');
   }
   let res = [moment(num).fromNow(!!short)];
   if (prefix) {
@@ -49,7 +58,7 @@ export function convertMinutes(num, prefix, short) {
   return res.join(' ');
 }
 
-export function convertCountdown(num, prefix, short) {
+export function toCountdown(num, prefix, short) {
   let res = [moment(num).fromNow(!!short)];
   if (prefix) {
     res.unshift(prefix);
@@ -57,10 +66,6 @@ export function convertCountdown(num, prefix, short) {
   return res.join(' ');
 }
 
-const minute = 60000;
-const hour = 60 * minute;
-const day = 1440 * minute;
-const stopper = 'smhd';
 
 export function toDuration(num, base = 'ms', zero = false, prefix, stop, trim = 0) {
   if (isString(num)) {

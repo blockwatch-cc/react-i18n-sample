@@ -1,5 +1,7 @@
 {
   "tk_language": "Ngôn ngữ",
+  "tk_duration_unit_map": "ng g ph th mg",
+  "tk_now": "hiện nay",
   "tk_examples": "Examples",
   "tk_text": "Text Examples",
   "tk_numbers": "Number Examples",

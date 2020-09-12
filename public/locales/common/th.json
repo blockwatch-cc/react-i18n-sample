@@ -1,5 +1,7 @@
 {
   "tk_language": "ภาษา",
+  "tk_duration_unit_map": "วัน ชั่วโมง นาที วินาที มิลลิวินาที",
+  "tk_now": "ตอนนี้",
   "tk_examples": "Examples",
   "tk_text": "Text Examples",
   "tk_numbers": "Number Examples",

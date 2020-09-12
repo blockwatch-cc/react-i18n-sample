@@ -1,9 +1,13 @@
+// Copyright (c) 2020 Blockwatch Data Inc.
+// Author: alex@blockwatch.cc
+// License: MIT
+//
 import React from 'react';
 import moment from 'moment';
 import numeral from 'numeral';
 import { Link } from 'react-router-dom';
 import { Trans, useTranslation } from 'react-i18next';
-import { isDefined, isArray, isBool, isDate, isNumber, isString, toDuration, toShortHash } from '../services/utils';
+import { isDefined, isArray, isBool, isDate, isNumber, isString, toDuration, toCalendar, toShortHash } from '../services/utils';
 
 // Render localized content.
 //
@@ -54,11 +58,17 @@ export const I18nView = ({ as = 'span', i18d, format = ',.', opts = {}, to, chil
       }
       break;
     case isDate(children):
-      if (format === 'ago') {
+      switch (format) {
+      case 'ago':
         render = moment(children).fromNow();
-      } else {
+        break;
+      case 'calendar':
+      console.log("Cal", children)
+        render = toCalendar(children, opts.prefix, opts.short, opts.nowdiff);
+        break;
+      default:
         render = moment.parseZone(children).format(format || 'lll');
-      }
+      };
       break;
       // no default
   }
@@ -75,7 +85,7 @@ export const I18nView = ({ as = 'span', i18d, format = ',.', opts = {}, to, chil
       props.target = opts.target || '_blank';
       props.rel = opts.rel || 'noopener noreferrer';
       props.href = opts.href || target;
-      return (<Link {...props}>{render}</Link>);
+      return (<a {...props}>{render}</a>);
     } else {
       // in-app links
       return (<Link to={target} {...props}>{render}</Link>);
@@ -177,7 +187,7 @@ export const NumberView = ({ v, format = ',.', max, zero, children, ...props }) 
 export const PercentView = ({ v, format = ',. %', children, ...props }) => {
   var value = isDefined(v) ? v : children;
   return (
-    <I18nView format={format} dim {...props}>
+    <I18nView format={format} {...props}>
       {value}
     </I18nView>
   );

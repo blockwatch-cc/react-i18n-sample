@@ -1,5 +1,7 @@
 {
   "tk_language": "Jezik",
+  "tk_duration_unit_map": "dana sata min sek ms",
+  "tk_now": "sada",
   "tk_examples": "Examples",
   "tk_text": "Text Examples",
   "tk_numbers": "Number Examples",
