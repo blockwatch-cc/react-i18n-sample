@@ -1,16 +1,16 @@
 {
   "tk_language": "言語",
-  "tk_duration_unit_map": "d h min sec ms",
+  "tk_duration_unit_map": "日 時 分 秒 ミリ秒",
   "tk_now": "今",
-  "tk_examples": "Examples",
-  "tk_text": "Text Examples",
-  "tk_numbers": "Number Examples",
-  "tk_dates": "Date & Time Examples",
-  "tk_sample_text": "Sample Text",
-  "tk_ipol": "ETH address {{address, shorthash}}",
-  "tk_count": "{{count, number}} item",
-  "tk_count_plural": "{{count, number}} items",
-  "tk_link_home": "Home",
-  "tk_link_pair": "Pair Subpage",
-  "tk_link_ext": "Twitter"
+  "tk_examples": "例",
+  "tk_text": "テキストの例",
+  "tk_numbers": "数値の例",
+  "tk_dates": "日付と時刻の例",
+  "tk_sample_text": "サンプルテキスト",
+  "tk_ipol": "ETHアドレス {{address, shorthash}}",
+  "tk_count": "{{count, number}} 項目",
+  "tk_count_plural": "{{count, number}} 項目",
+  "tk_link_home": "ホーム",
+  "tk_link_pair": "ペアサブページ",
+  "tk_link_ext": "ツイッター"
 }
