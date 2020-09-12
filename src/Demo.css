@@ -1,0 +1,47 @@
+section {
+	display: grid;
+	max-width: 900px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: "code sample";
+	grid-gap: 2em;
+	text-align: left;
+	margin: 0 auto;
+	font-size: 16px;
+    line-height: 1.5;
+}
+
+button {
+	padding: 0.5em 1em;
+	margin-bottom: 1em;
+	margin-right: 1em;
+	cursor: pointer;
+	text-align: center;
+	border-radius: 0.25rem;
+ 	border: 1px solid #c9c9c9;
+}
+
+button.active {
+	background-color: #157aca;
+	color: #fff;
+	border-color: #045fa7;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.pad {
+	padding: 1em;
+}
+
+pre {
+	background-color: #f6f6f6;
+	border: 1px solid #d6d9dc;
+	width: auto;
+	border-radius: .25em;
+	padding: 1em;
+	margin: 0;
+	font-size: 14px;
+	line-height: 1.4;
+}

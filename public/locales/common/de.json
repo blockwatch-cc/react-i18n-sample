@@ -1,0 +1,14 @@
+{
+  "tk_language": "Sprache",
+  "tk_examples": "Beispiele",
+  "tk_text": "Textbeispiele",
+  "tk_numbers": "Nummernbeispiele",
+  "tk_dates": "Datums- & Zeitbeispiele",
+  "tk_sample_text": "Beispieltext",
+  "tk_ipol": "ETH Addresse {{address, shorthash}}",
+  "tk_count": "{{count, number}} Stück",
+  "tk_count_plural": "{{count, number}} Stücke",
+  "tk_link_home": "Startseite",
+  "tk_link_pair": "Pair Seite",
+  "tk_link_ext": "Twitter"
+}
