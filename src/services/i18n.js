@@ -77,8 +77,8 @@ i18n
   .use(initReactI18next)
   .init({
     backend: {
-      loadPath: '/locales/{{ns}}/{{lng}}.json',
-      addPath: '/locales/{{ns}}.missing.json',
+      loadPath: process.env.PUBLIC_URL + '/locales/{{ns}}/{{lng}}.json',
+      addPath: process.env.PUBLIC_URL + '/locales/{{ns}}.missing.json',
       jsonIndent: 4,
     },
     debug: false,

@@ -63,7 +63,6 @@ export const I18nView = ({ as = 'span', i18d, format = ',.', opts = {}, to, chil
         render = moment(children).fromNow();
         break;
       case 'calendar':
-      console.log("Cal", children)
         render = toCalendar(children, opts.prefix, opts.short, opts.nowdiff);
         break;
       default:
